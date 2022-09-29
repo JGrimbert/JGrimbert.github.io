@@ -1,0 +1,27 @@
+{
+  "name": "MerxBiblio",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "serve": "vite preview",
+    "test": "jest src"
+  },
+  "dependencies": {
+    "fuzzysort": "^2.0.1",
+    "vue": "^3.2.16"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "@vitejs/plugin-vue": "^1.9.3",
+    "@vue/test-utils": "^2.0.0-rc.15",
+    "@vue/vue3-jest": "^27.0.0-alpha.1",
+    "jest": "^27.2.5",
+    "ts-jest": "^27.0.5",
+    "typescript": "^4.4.3",
+    "vite": "^2.6.4",
+    "vue-tsc": "^0.3.0",
+    "sass": "^1.55.0",
+    "sass-loader": "^13.0.2"
+  }
+}
