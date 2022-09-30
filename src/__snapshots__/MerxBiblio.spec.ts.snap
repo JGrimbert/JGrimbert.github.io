@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MerxBiblio should contain the proposal, discount and bag components 1`] = `
+"<main>
+  <merx-biblio-proposal-stub></merx-biblio-proposal-stub>
+  <merx-biblio-discount-stub></merx-biblio-discount-stub>
+  <merx-biblio-bag-stub></merx-biblio-bag-stub>
+</main>"
+`;

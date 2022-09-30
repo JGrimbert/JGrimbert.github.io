@@ -12,6 +12,7 @@
     "vue": "^3.2.16"
   },
   "devDependencies": {
+    "node-fetch": "^3.2.10",
     "@types/jest": "^27.0.2",
     "@vitejs/plugin-vue": "^1.9.3",
     "@vue/test-utils": "^2.0.0-rc.15",
@@ -22,6 +23,7 @@
     "vite": "^2.6.4",
     "vue-tsc": "^0.3.0",
     "sass": "^1.55.0",
-    "sass-loader": "^13.0.2"
+    "sass-loader": "^13.0.2",
+    "@testing-library/jest-dom": "^5.16.5"
   }
 }
