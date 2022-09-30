@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { biblio } from "../model";
+import { biblio } from "../states";
 import { computed } from "vue";
 import fuzzysort from "fuzzysort";
 

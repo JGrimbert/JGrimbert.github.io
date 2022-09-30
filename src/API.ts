@@ -7,4 +7,5 @@ export const API = ({
     getOffers: async (url: string[]) => {
         return url.length && (await fetch(`${API_URL}${url}/commercialOffers`)).json();
     }
+
 });

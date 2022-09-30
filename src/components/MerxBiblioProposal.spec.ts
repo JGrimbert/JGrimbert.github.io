@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils'
-import { biblio } from '../model';
+import { biblio } from '../states';
 import MerxBiblioProposal from './MerxBiblioProposal.vue'
 import {API} from "../API";
 

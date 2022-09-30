@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { merx, discounts } from "../model";
+  import { merx, discounts } from "../states";
 </script>
 
 <template>

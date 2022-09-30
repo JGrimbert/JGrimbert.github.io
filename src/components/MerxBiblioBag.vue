@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { biblio } from "../model";
+  import { biblio } from "../states";
 </script>
 
 <template>
@@ -19,7 +19,3 @@
     </label>
   </article>
 </template>
-
-<style scoped>
-
-</style>

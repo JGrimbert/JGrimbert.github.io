@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { onMounted } from 'vue'
-  import { biblio } from "./model";
+  import { biblio } from "./states";
   import { API } from "./API";
   import MerxBiblioDiscount from './components/MerxBiblioDiscount.vue'
   import MerxBiblioBag from './components/MerxBiblioBag.vue'

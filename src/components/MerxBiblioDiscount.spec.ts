@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils'
-import { biblio, merx } from '../model';
+import { biblio, merx } from '../states';
 import MerxBiblioDiscount from './MerxBiblioDiscount.vue'
 import {API} from "../API";
 
@@ -17,7 +17,7 @@ biblio.complete = [
     { isbn:"4", title: "quatre", price: 4, cover: '4.jpg' },
 ];
 
-const mountDiscount = (offer: Array<any> = [], selected:Array<any> = ["0"]) => {
+const mountDiscount = (offer: Array<any> = []) => {
     API.getOffers = jest.fn(() => Promise.resolve({ offers: offer }));
     return shallowMount(MerxBiblioDiscount);
 }
@@ -30,7 +30,7 @@ describe('MerxBiblioDiscount', () => {
         expect(mountDiscount().find('#CTA').text()).toBe("Sélectionnez les produits de votre choix")
     });
     it(`When offers exist, show them`, async () => {
-        const wrapper = mountDiscount(offers, [{}]);
+        const wrapper = mountDiscount(offers);
         biblio.selected = [{}];
         await wrapper.vm.$nextTick()
         await wrapper.vm.$nextTick()
@@ -39,7 +39,7 @@ describe('MerxBiblioDiscount', () => {
         expect(wrapper.findAll('#offers li').at(2)?.text()).toBe("Vous pourriez bénéficier de la réduction de 12€ par tranche de 100€ d'achat")
     });
     it(`When an offer exists, show the initial price, the discount and the difference`, async () => {
-        const wrapper = mountDiscount(offers, ["0","1","2"]);
+        const wrapper = mountDiscount(offers);
         biblio.selected = [{ price: 30 }, { price: 35 }];
         await wrapper.vm.$nextTick()
         await wrapper.vm.$nextTick()

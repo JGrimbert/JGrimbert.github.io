@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils'
-import { biblio, merx } from './model';
+import { biblio, merx } from './states';
 import MerxBiblio from './MerxBiblio.vue'
 import { API } from "./API";
 
@@ -9,10 +9,6 @@ describe('MerxBiblio', () => {
         API.getBooks = jest.fn(() => Promise.resolve(biblio));
         return shallowMount(MerxBiblio);
     }
-
-    beforeEach(() => {
-        jest.clearAllMocks();
-    });
 
     it(`should fetch book list on mounted and update Biblio & Merx`, async () => {
         await mountBiblio([{}, {}]);
