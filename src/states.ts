@@ -11,7 +11,7 @@ export const merx: IMerx = reactive({
 export const biblio: IBiblio = reactive({
     complete: [],
     selected: [],
-    choosen: {},
+    choosen: [],
     searched: "",
 });
 

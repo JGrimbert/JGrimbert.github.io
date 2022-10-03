@@ -1,6 +1,6 @@
 export interface IBiblio {
     complete: Array<any>,
-    choosen: object,
+    choosen: Array<any>,
     selected: Array<any>,
     searched: string,
 }
